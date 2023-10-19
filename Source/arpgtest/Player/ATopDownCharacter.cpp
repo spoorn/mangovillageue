@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "MVCharacter.h"
+#include "ATopDownCharacter.h"
 
 #include "MVCharacterMovementComponent.h"
 #include "Camera/CameraComponent.h"
@@ -14,7 +14,7 @@
 /// We override the CharacterMovement component as we need to set [`bUseAccelerationForPaths`] to true, but it is
 /// protected, so our custom MVCharacterMovementComponent sets it.  Acceleration needs to be turned on in order for
 /// the released movement to work with default character blueprints (Manny/Quinn).
-AMVCharacter::AMVCharacter(const class FObjectInitializer& ObjectInitializer) : Super(
+ATopDownCharacter::ATopDownCharacter(const class FObjectInitializer& ObjectInitializer) : Super(
 	ObjectInitializer.SetDefaultSubobjectClass<UMVCharacterMovementComponent>(
 		ACharacter::CharacterMovementComponentName))
 {
